@@ -1,0 +1,16 @@
+repos:
+  -   repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.4.0
+      hooks:
+        -   id: trailing-whitespace
+        -   id: end-of-file-fixer
+        -   id: check-yaml
+        -   id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: update-app-version
+        name: update-app-version
+        entry: update-app.sh
+        language: script
+        pass_filenames: false
